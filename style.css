@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Roboto:wght@100;300;400;700&display=swap");
+
+html {
+  font-family: "DM Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+body {
+  height: 100%;
+}
+a {
+  text-decoration: none;
+  color: #aaaaaa;
+}
+li {
+  list-style: none;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+}
+
+.category {
+  flex: 1;
+  min-width: 150px;
+  background-color: #191718;
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .category {
+    display: block;
+  }
+}
+.category__list li {
+  height: 44px;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 15px;
+  color: #aaaaaa;
+  border-bottom: 0.5px solid #5c5c5c;
+}
+.category__list li:hover {
+  background-color: #5c5c5c;
+}
+
+.category__list li:hover a {
+  color: #fff;
+}
+
+.active {
+  color: #fff;
+}
+.show {
+    display: block;
+}
+
+.toggle-button {
+  display: block;
+  font-size: 20px;
+  margin: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .toggle-button {
+    display: none;
+  }
+}
+
+.wrap {
+  flex: 9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header {
+  margin-top: 20px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-top: 30px;
+}
+
+.about {
+  background-color: #efefef;
+  text-align: center;
+}
+.about__container {
+  width: 60%;
+  margin: 38px auto;
+}
+.about__title {
+  margin-bottom: 18px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.about__desc {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.content {
+  display: flex;
+  margin-top: 40px;
+  justify-content: space-between;
+}
+.content > * {
+  margin-right: 50px;
+}
+
+.content > *:last-child {
+  margin-right: 0;
+}
+.content__container {
+  max-width: 470px;
+  min-height: 400px;
+  margin-bottom: 100px;
+}
+.content__title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+.content_image {
+  float: left;
+  width: 128px;
+  height: 128px;
+  margin-right: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+    .content {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .content__container {
+        min-width: 470px;
+        margin-bottom: 0;
+      }
+  }
+
+.footer {
+  width: 80%;
+  margin: 30px auto;
+}
+.footer span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #3e3e3e;
+}
